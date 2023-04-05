@@ -28,7 +28,7 @@ export default {
         return false
       }
 
-      axios.post(`http://localhost:3002/login`, dado).then((res) => {
+      axios.post(`https://chat-ax-backend.onrender.com/login`, dado).then((res) => {
         const socketService = new SocketService();
         const socket = socketService.getSocket();
         if(res.status === 200) {

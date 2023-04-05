@@ -25,7 +25,7 @@ export default {
         return false
       }
 
-    axios.post(`http://localhost:3002/register`, dado).then((res) => {
+    axios.post(`https://chat-ax-backend.onrender.com/register`, dado).then((res) => {
         if(res.status === 200) {
           toast.success(res.data.data)
           this.$router.push('/');

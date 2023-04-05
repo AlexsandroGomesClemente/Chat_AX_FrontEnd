@@ -4,7 +4,7 @@ export class SocketService {
   private socket: Socket;
 
   constructor() {
-    this.socket = io('http://localhost:3002');
+    this.socket = io('https://chat-ax-backend.onrender.com');
   }
 
   public getSocket(): Socket {
