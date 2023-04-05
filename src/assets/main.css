@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;;
+}
+
+body {
+    background-image: url('../assets/bg-6.jpg');
+    background-repeat: no-repeat;
+    background-position: cover;
+    
+  
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #0a0a37;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #243140;
+    border-radius: 5px;
+  }
