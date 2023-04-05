@@ -15,9 +15,8 @@ export default {
     const socketService = new SocketService();
     const socket = socketService.getSocket();
     socket.on('show-msg', (obj: any) => {
+
         if (this.storeUser.user[0].name !== obj.username){
-            console.log(obj.username, 'obj')
-            console.log(this.storeUser.user[0].name, 'this')
             this.storeMsg.incrementOutherMessage(obj.message, obj.username )
         }
 
@@ -31,10 +30,10 @@ export default {
 <template>
     <div class="display">
         <div class="msg">
-            <div v-for="mss in storeMsg.allMenssage" :key='index' :class=" mss.type === 1 ? 'users-msg ': 'my-msg'">
+            <div v-for="mss in storeMsg.allMenssage" :key='mss' :class=" mss.type === 1 ? 'users-msg ': 'my-msg'">
                 
                 <p>
-                    <strong>{{ mss.nome }}:</strong>
+                    <strong>{{mss.nome}}:</strong>
                     {{ mss.msg }}
                 </p>
             </div>

@@ -15,7 +15,10 @@ export default {
         <spam>
             <img src="@/assets/avatar-removebg-preview.png" />
         </spam>
-        <p>{{user.user[0].name}}</p>
+        
+        <p>{{
+            user.user[0].name
+        }}</p>
     </div>
 </template>
 

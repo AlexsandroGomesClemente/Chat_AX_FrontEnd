@@ -17,7 +17,9 @@ export default {
       const socket = socketService.getSocket();
 
       if (this.mensagem !== ""){
+      
       socket.emit('message', {text: this.mensagem, name: this.storeUser.user[0].name});
+      
       this.storeMsg.incrementMyMessage(this.mensagem, this.storeUser.user[0].name)
       this.mensagem = '';
       }
