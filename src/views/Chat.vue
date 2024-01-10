@@ -12,41 +12,34 @@ export default {
 </script>
 
 <template>
-    <main >
+    <main>
         <div class="container-main">
-            
-            <User/>
-
-            <Display/>
-
+            <User />
+            <Display />
         </div>
     </main>
 </template>
 
 
 <style scoped>
-    main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        height: 100vh;
-        overflow: hidden;
-    }
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    .container-main {
-        height: 100%;
-        width:  100%;
-        
-        border: none;
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+}
 
-    }
+.container-main {
+    height: 100%;
+    width: 100%;
 
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
 
-  
-
+}
 </style>

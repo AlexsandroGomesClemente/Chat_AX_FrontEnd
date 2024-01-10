@@ -15,11 +15,10 @@ export default {
 
 <template>
     <div class="container-slide">
-       <AreaLogo/>
-       <AreaDisplay/>
-       <InputMsg/>
-       
-       </div>
+        <AreaLogo />
+        <AreaDisplay />
+        <InputMsg />
+    </div>
 </template>
 
 <style scoped>
@@ -28,12 +27,12 @@ export default {
 
 
     height: 100%;
-    width: 75%;
+    width: 100%;
 }
-.container-slide{
+
+.container-slide {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
-
 </style>

@@ -4,7 +4,7 @@ import UserOn from './UserComponents/UserOn.vue'
 import UserList from './UserComponents/UserList.vue'
 
 export default {
-    components:{
+    components: {
         UserProfile,
         UserOn,
         UserList
@@ -13,21 +13,20 @@ export default {
 </script>
 
 <template>
-
     <div class="container-list-user">
-        
-        <UserProfile/>
 
-        <UserOn/>
+        <UserProfile />
 
-        <UserList/>
-      
-   </div>
+        <UserOn />
+
+        <UserList />
+
+    </div>
 </template>
 
 <style scoped>
-.container-list-user{
-    background-color:#2C3E50;
+.container-list-user {
+    background-color: #4BC2FA;
     height: 100%;
     width: 32%;
 
@@ -36,5 +35,4 @@ export default {
     justify-content: start;
     align-items: start;
 }
-
 </style>

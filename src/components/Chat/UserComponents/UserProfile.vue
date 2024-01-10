@@ -13,7 +13,7 @@ export default {
 <template>
     <div class="user-profile">
         <spam>
-            <img src="@/assets/avatar-removebg-preview.png" />
+            <img src="../../../assets/avatar-removebg-preview.png" />
         </spam>
         
         <p>{{
@@ -47,7 +47,7 @@ export default {
 
 border: 2px solid black;
 border-radius: 50%;
-background-color: rgb(31, 29, 27);
+background-color: rgb(255, 255, 255);
 
 height: 60px;
 width: 60px;

@@ -36,7 +36,7 @@ export default {
         
 
         border-radius: 20px;
-        border: solid 5px black;
+        border: solid 2px black;
 
         display:flex;
         justify-content: space-between;

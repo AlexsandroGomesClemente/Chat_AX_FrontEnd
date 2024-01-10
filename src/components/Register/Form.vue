@@ -25,12 +25,11 @@ export default {
         return false
       }
 
-    axios.post(`https://chat-ax-backend.onrender.com/register`, dado).then((res) => {
+     axios.post(`https://chat-ax-backend.onrender.com/register`, dado).then((res) => {
         if(res.status === 200) {
           toast.success(res.data.data)
           this.$router.push('/');
         }
-
       }).catch((err)=> {
         toast.error('Cadastro não realizado')
       })

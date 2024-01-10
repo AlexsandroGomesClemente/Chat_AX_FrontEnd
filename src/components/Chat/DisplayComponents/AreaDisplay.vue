@@ -101,8 +101,8 @@ export default {
  }
 
  .my-msg p {
-    background-color: #2C3E50;
-    border: 2px solid #2C3E50 ;
+    background-color: #4bc2fa;
+    border: 2px solid #4bc2fa ;
     
     border-top-left-radius: 45px;
     border-top-right-radius: 45px;

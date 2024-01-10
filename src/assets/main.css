@@ -7,9 +7,9 @@
 }
 
 body {
-    background-image: url('../assets/bg-6.jpg');
+    background-image: url('../assets/bg-8.jpg');
     background-repeat: no-repeat;
-    background-position: cover;
+    background-position: right;
     
   
 }
@@ -17,10 +17,10 @@ body {
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
-    background-color: #0a0a37;
+    background-color: #4BC2FA;
   }
   
   ::-webkit-scrollbar-thumb {
-    background-color: #243140;
+    background-color: #2EB9FA;
     border-radius: 5px;
   }
