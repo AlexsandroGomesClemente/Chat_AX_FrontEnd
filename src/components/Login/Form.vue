@@ -13,6 +13,7 @@ export default {
       password: '',
       backend: false,
       user: useUserStore()
+
     }
   },
   methods: {
@@ -55,8 +56,23 @@ export default {
         name: this.name,
         email: "teste@teste.com"
       }]
+
+
+      if (this.name == '') {
+        toast.error('Preencha seu nome')
+        return false
+      }
+
       const users = localStorage.getItem("users")
-      localStorage.setItem("users", [users, this.name])
+
+      if (users?.length > 0) {
+        this.user.incrementUsers(this.name)
+        localStorage.setItem("users", [users, this.name])
+      } else {
+        this.user.incrementUsers(this.name)
+        localStorage.setItem('users', [this.name])
+      }
+
       this.user.incrementUser(dado)
       this.$router.push('/chat');
     }
@@ -184,5 +200,24 @@ export default {
 .container-form .link {
   color: rgb(76, 31, 238);
   text-decoration: none;
+}
+
+
+@media screen and (max-width: 768px) and (min-width : 426px) {
+
+  /* Estilos para telas menores que 768px */
+  .form-group {
+    width: 210px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .container-form h3 {
+    font-size: 16px;
+  }
+
+  .form-group {
+    width: 150px;
+  }
 }
 </style>

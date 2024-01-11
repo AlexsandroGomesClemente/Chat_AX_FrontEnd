@@ -1,5 +1,6 @@
 <script lang="ts">
 import { SocketService } from '@/socket';
+import localstorage from '../../../mixins/localstorage.js'
 
 export default {
     data() {
@@ -7,6 +8,7 @@ export default {
             userList: [],
         }
     },
+    mixins: [localstorage],
     created() {
         const socketService = new SocketService();
         const socket = socketService.getSocket();

@@ -7,14 +7,31 @@ export default {
     components: {
         User,
         Display
-    }
+    },
+    data() {
+        return {
+            larguraDaTela: window.innerWidth,
+            larguraDeCorte: 450,
+        };
+    },
+    mounted() {
+        window.addEventListener('resize', this.verificarLarguraDaTela);
+    },
+    beforeDestroy() {
+        window.removeEventListener('resize', this.verificarLarguraDaTela);
+    },
+    methods: {
+        verificarLarguraDaTela() {
+            this.larguraDaTela = window.innerWidth;
+        },
+    },
 }
 </script>
 
 <template>
     <main>
         <div class="container-main">
-            <User />
+            <User v-if="larguraDaTela > larguraDeCorte" />
             <Display />
         </div>
     </main>

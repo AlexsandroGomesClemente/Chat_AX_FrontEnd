@@ -1,21 +1,24 @@
 <script lang="ts">
 import { SocketService } from '@/socket';
+import localstorage from '../../../mixins/localstorage.js'
 
 export default {
     data() {
         return {
-            userList: []
+            userList: [],
         }
     },
+    mixins: [localstorage],
     created() {
         const socketService = new SocketService();
         const socket = socketService.getSocket();
         socket.on('user-list', (users: any) => {
             this.userList = users
         });
+
         const countUser = localStorage.getItem('users')
         this.userList.push(...countUser?.split(','))
-    }
+    },
 }
 
 </script>

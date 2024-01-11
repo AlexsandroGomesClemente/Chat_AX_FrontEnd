@@ -11,28 +11,32 @@ export default {
             storeMsg: useMenssageStore(),
             storeUser: useUserStore(),
             modalOpen: false,
-            emojis: []
+            emojis: [],
+
         }
     },
     methods: {
         sendMessage() {
             const socketService = new SocketService();
             const socket = socketService.getSocket();
-            const historyMessage = localStorage.getItem("history")
+            // Recupera o histórico de mensagens do localStorage
+            const historyMessage = JSON.parse(localStorage.getItem("history")) || [];
 
+            if (historyMessage.length > 0) localStorage.setItem("hasHistory", true)
 
-            //@ts-ignore
             const talkHistory = {
                 user: this.storeUser.user[0].name,
                 mensagem: this.mensagem
-            }
+            };
 
+            historyMessage.push(talkHistory);
+
+            localStorage.setItem('history', JSON.stringify(historyMessage));
 
             if (this.modalOpen) this.openEmojis()
 
             if (this.mensagem !== "") {
                 //@ts-ignore
-                localStorage.setItem('history', [historyMessage, JSON.stringify(talkHistory)])
                 socket.emit('message', { text: this.mensagem, name: this.storeUser.user[0].name });
                 this.storeMsg.incrementMyMessage(this.mensagem, this.storeUser.user[0].name)
                 this.mensagem = '';
@@ -226,5 +230,45 @@ nav ul li {
 .list-emojis {
     font-size: 20px;
     margin: 5px -1px;
+}
+
+@media screen and (max-width : 1200px) {
+    .send-msg input {
+        width: 90%;
+        height: 100%;
+        padding: 10px;
+        border: none;
+        outline: none;
+    }
+}
+
+@media screen and (max-width : 934px) {
+    .send-msg input {
+        width: 85%;
+        height: 100%;
+        padding: 10px;
+        border: none;
+        outline: none;
+    }
+}
+
+@media screen and (max-width : 660px) {
+    .send-msg input {
+        width: 82%;
+        height: 100%;
+        padding: 10px;
+        border: none;
+        outline: none;
+    }
+}
+
+@media screen and (max-width : 375px) {
+    .send-msg input {
+        width: 60%;
+        height: 100%;
+        padding: 10px;
+        border: none;
+        outline: none;
+    }
 }
 </style>
