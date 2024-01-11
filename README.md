@@ -1,40 +1,45 @@
-# chat_ax
+# QuickClient
 
-This template should help get you started developing with Vue 3 in Vite.
+## Descrição
 
-## Recommended IDE Setup
+Bem-vindo ao **Chat Ax**!. Ele consiste em um front-end construído com Vue.js e um back-end construído com Node.js.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Pré-requisitos
 
-## Type Support for `.vue` Imports in TS
+Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+- **Node.js (versão LTS):**
+- **Vue Vite (para o front-end):** Você pode instalá-lo globalmente com o comando `npm install -g @vue/vite`
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## Configuração do Front-end (Vue.js)
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+1. Navegue até o diretório `front-end`:
 
-## Customize configuration
+    ```bash
+    cd front-end
+    ```
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+2. Instale as dependências:
 
-## Project Setup
+    ```bash
+    npm install
+    ```
 
-```sh
-npm install
-```
+3. Inicie o servidor de desenvolvimento:
 
-### Compile and Hot-Reload for Development
+    ```bash
+    npm run dev
+    ```
 
-```sh
-npm run dev
-```
+   O aplicativo Vue.js estará disponível para você.
 
-### Type-Check, Compile and Minify for Production
+## Quer pular as configurações e testar a aplicação ?
+Acesse o link https://chat-ax.vercel.app/
 
-```sh
-npm run build
-```
+## Contato
+
+Se você tiver dúvidas ou sugestões, sinta-se à vontade para entrar em contato:
+
+- Alexsandro Gomes Clemente - [alexsandro.gomes.clemente@hotmail.com](mailto:alexsandro.gomes.clemente@hotmail.com)
+
+Agradeço por testar **QuickClient**! 🚀
