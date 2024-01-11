@@ -42,4 +42,4 @@ Se você tiver dúvidas ou sugestões, sinta-se à vontade para entrar em contat
 
 - Alexsandro Gomes Clemente - [alexsandro.gomes.clemente@hotmail.com](mailto:alexsandro.gomes.clemente@hotmail.com)
 
-Agradeço por testar **QuickClient**! 🚀
+Agradeço por testar **Chat Ax**! 🚀
